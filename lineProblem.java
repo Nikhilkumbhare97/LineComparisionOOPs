@@ -9,15 +9,16 @@ public class lineProblem {
 		length2 = Math.sqrt(((m2-m1)*(m2-m1)) + ((n2-n1)*(n2-n1)));
 	}
 
-	static void equality() {
-		boolean result = length1.equals(length2);
-			if(result) {
+	static void compare() {
+		int result = length1.compareTo(length2);
+			if(result == 0) {
 				System.out.println("Line1 and Line2 are equal in Length");
+			}else if (result > 0) {
+				System.out.println("Line1 is greater than Line2 in Length");
 			}else {
-				System.out.println("Line1 and Line2 are not equal in Length");
+				System.out.println("Line1 is less than Line2 in Length");
 			}
 	}
-
 
 	public static void main (String[] args) {
 
@@ -50,6 +51,6 @@ public class lineProblem {
 			System.out.println("Length of Line1: "+length1);
 			System.out.println("Length of Line2: "+length2);
 
-			equality();
+			compare();
 	}
 }
